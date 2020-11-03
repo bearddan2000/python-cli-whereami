@@ -1,0 +1,30 @@
+[2020-10-31 20:31:00
+ INFO]: startup started
+[2020-10-31 20:31:00
+ INFO]: startup build image from ./centos
+Sending build context to Docker daemon  3.584kB
+Step 1/4 : FROM centos:latest
+ ---> 0d120b6ccaa8
+Step 2/4 : COPY bin/main.sh /usr/local/
+ ---> 3590469fe915
+Step 3/4 : RUN yum -q -y install python3
+ ---> Running in f7170333e291
+[91mwarning: /var/cache/dnf/AppStream-02e86d1c976ab532/packages/python3-pip-9.0.3-16.el8.noarch.rpm: Header V3 RSA/SHA256 Signature, key ID 8483c65d: NOKEY
+[0m[91mImporting GPG key 0x8483C65D:
+ Userid     : "CentOS (CentOS Official Signing Key) <security@centos.org>"
+ Fingerprint: 99DB 70FA E1D7 CE22 7FB6 4882 05B5 55B3 8483 C65D
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+[0mRemoving intermediate container f7170333e291
+ ---> 0da5ec0893b1
+Step 4/4 : CMD ["python3", "/usr/local/main.sh"]
+ ---> Running in b96781b6d166
+Removing intermediate container b96781b6d166
+ ---> 1271bba9cf01
+Successfully built 1271bba9cf01
+Successfully tagged perl-cli-whoami:latest
+[2020-10-31 20:31:00
+ INFO]: startup running image
+[OUTPUT] hello world from /
+
+[2020-10-31 20:31:00
+ INFO]: startup ended
