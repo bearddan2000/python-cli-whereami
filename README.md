@@ -20,7 +20,12 @@ Docker desktop must be installed and the application
 being called must be linux compatiple.
 
 ## To run
-```sudo ./install.sh -u```
+Alpine: `sudo ./install.sh -u`
+Centos: `sudo ./install.sh -u -c`
+Ubuntu: `sudo ./install.sh -u -u`
 
 ## To stop (optional)
-```sudo ./install.sh -d```
+`sudo ./install.sh -d`
+
+## To see help
+`sudo ./install.sh -h`
